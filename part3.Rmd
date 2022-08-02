@@ -11,3 +11,19 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(aes(color = species)) +
+labs(x = "Bill length mm", y = "Bill depth mm", title = "Palmer Penguins Bill Length and Bill Depth")
+```
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter(aes(color = species), width = 0.8) +
+  labs(x = "Species", y = "Flipper Length (mm)", title = "Penguin Flipper Length by Species")
+```
+
+
+
+
+
